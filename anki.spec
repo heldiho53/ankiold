@@ -32,6 +32,7 @@ Suggests:       sox
 BuildArch:      noarch
 BuildRequires:  fdupes
 BuildRequires:  desktop-file-utils
+BuildRequires:  xdg-utils
 
 %description
 Anki is a spaced repetition system (SRS). It helps the user remember things by
