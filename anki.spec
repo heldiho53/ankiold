@@ -7,6 +7,9 @@ Group:          Productivity/Text/Utilities
 URL:            https://apps.ankiweb.net/
 Source0:        https://github.com/heldiho53/ankiold/releases/download/stable/anki-2.1.13-source.tgz
 Source1:        https://raw.githubusercontent.com/heldiho53/ankiold/main/anki.appdata.xml
+Patch1:         %{name}-aqt___init__.py.patch
+Patch2:         %{name}-anki_lang.py.patch
+
 BuildRequires:  python3-markdown
 BuildRequires:  python3-pyaudio
 BuildRequires:  python3-send2trash
@@ -46,6 +49,9 @@ if the user has set a custom data path.
 
 %prep
 %setup -q
+%patch1 -p1
+%patch2 -p1
+
 
 # SED-FIX-OPENSUSE -- Don't check for new updates.
 sed -i -e 's|updates=True|updates=False|;
