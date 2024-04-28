@@ -102,7 +102,6 @@ update-mime-database %{_datadir}/mime
 %doc README.md
 %license LICENSE LICENSE.logo
 %{_bindir}/%{name}
-%{_mandir}/man1/%{name}.1%{?ext_man}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.*
 %{_datadir}/appdata/%{name}.appdata.xml
