@@ -6,8 +6,8 @@ Summary:        Spaced-Repetition Memory Training Program
 License:        AGPL-3.0-only
 Group:          Productivity/Text/Utilities
 URL:            https://apps.ankiweb.net/
-#Source0:        https://apps.ankiweb.net/downloads/current/%{name}-%{version}-source.tgz
-Source1:        %{name}.appdata.xml
+Source0:        https://github.com/heldiho53/ankiold/releases/download/stable/anki-2.1.13-source.tgz
+Source1:        https://raw.githubusercontent.com/heldiho53/ankiold/main/anki.appdata.xml
 # PATCH-FIX-OPENSUSE - anki-aqt___init__.py.patch -- Load Qt4 translations from the right place
 #Patch1:         %{name}-aqt___init__.py.patch
 # PATCH-FIX-OPENSUSE - anki-anki_lang.py.patch -- Load Anki translations from the right place
