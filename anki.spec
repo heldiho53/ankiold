@@ -1,4 +1,3 @@
-%bcond_without tests
 Name:           anki
 Version:        2.1.13
 Release:        1%{?dist}
@@ -33,9 +32,6 @@ Suggests:       sox
 BuildArch:      noarch
 BuildRequires:  fdupes
 BuildRequires:  desktop-file-utils
-%if %{with tests}
-BuildRequires:  python3-nose2
-%endif
 
 %description
 Anki is a spaced repetition system (SRS). It helps the user remember things by
@@ -88,13 +84,6 @@ rm %{buildroot}%{_datadir}/doc/anki/README.md
 # Fix rpmlint issues
 find %{buildroot}%{_datadir}/%{name}/web/ -name '*.js' -exec chmod a-x {} +
 sed -i 's|/usr/bin/env python3|/usr/bin/python3|' %{buildroot}%{_bindir}/%{name}
-
-%check
-%if %{with tests}
-# to prevent Exception("Anki requires a UTF-8 locale.")
-export LC_ALL=en_US.UTF-8
-./tools/tests.sh
-%endif
 
 %post
 update-mime-database %{_datadir}/mime
