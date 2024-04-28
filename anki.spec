@@ -7,8 +7,8 @@ Group:          Productivity/Text/Utilities
 URL:            https://apps.ankiweb.net/
 Source0:        https://github.com/heldiho53/ankiold/releases/download/stable/anki-2.1.13-source.tgz
 Source1:        https://raw.githubusercontent.com/heldiho53/ankiold/main/anki.appdata.xml
-Patch1:         %{name}-aqt___init__.py.patch
-Patch2:         %{name}-anki_lang.py.patch
+Patch1:         https://raw.githubusercontent.com/heldiho53/ankiold/main/anki-aqt___init__.py.patch
+Patch2:         https://raw.githubusercontent.com/heldiho53/ankiold/main/anki-anki_lang.py.patch
 
 BuildRequires:  python3-markdown
 BuildRequires:  python3-pyaudio
